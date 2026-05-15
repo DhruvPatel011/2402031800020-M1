@@ -16,3 +16,17 @@ for (let i = 1; i <= 10; i++) {
     }
 }
 document.write("<br><br>");
+
+
+// PR-3: Factorial
+let n = 5;
+let fact = 1;
+for (let i = 1; i <= n; i++) {
+    fact *= i;
+}
+document.write("<h4>3. Factorial of a Number</h4>");
+document.write("Factorial of " + n + " = " + fact);
+document.write("<br><br>");
+
+
+
