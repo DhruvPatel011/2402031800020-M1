@@ -103,7 +103,7 @@ document.write("<br><br>");
 //PR-9: Countdown Timer
 let time = 10;
 let interval;
-document.write("<h3>9. Countdown Timer</h3>");
+document.write("<h3>9. Countdown Timer //Top of the code</h3>");
 function startTimer() {
     clearInterval(interval); // reset if clicked again
     time = 10;
@@ -116,4 +116,26 @@ function startTimer() {
         }
     }, 1000);
 }
+document.write("<br>");
+
+
+//PR-10: Access Array Elements
+document.write("<h3>10. Access Array Element</h3>");
+var car = new Array(3);
+car[0] = "Food";
+car[1] = "Toyota";
+car[2] = "Honda";
+var car2 = new Array("Food","Toyota","Honda");
+var car3 = ["Odi","Innova","Vagon"];
+document.write(car2);
+document.write("<br>");
+car2.push("Yamaha");
+document.write(car2);
+document.write("<br>");
+car2.pop();
+document.write(car2);
+document.write("<br>");
+var data = car2.concat(car3);
+document.write(data);
+
 
