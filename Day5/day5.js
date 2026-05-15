@@ -66,3 +66,22 @@ document.write("Number = " + num1 + "<br>");
 document.write("Sum of Digits = " + sum);
 document.write("<br><br>");
 
+//PR-7: Find Armstrong Nummber
+let num2 = 153;
+let temp2 = num2;
+let armstrong = 0;
+    while (temp2 > 0) {
+        let digit = temp2 % 10;
+        armstrong = armstrong + (digit * digit * digit);
+        temp2 = parseInt(temp2 / 10);
+    }
+document.write("<h4>7. Armstrong Number</h4>");
+document.write("Original Nummber = "+num2);
+document.write("<br>");
+    if (armstrong == num2) {
+        document.write(num2 + " is an Armstrong Number");
+    } else {
+        document.write(num2 + " is not an Armstrong Number");
+    }
+document.write("<br><br>");
+
