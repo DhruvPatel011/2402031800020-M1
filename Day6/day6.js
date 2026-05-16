@@ -22,11 +22,21 @@ const d = new Date();
 document.write("<h3>4. Date Object</h3>");
 document.write(d);
 document.write("<br>");
-const o = new Date(2025,30);
+const o = new Date(2022,6,31,10,33,30,0);
 document.write(o);
-document.write("<br>");
+document.write("<br><br>");
 
-//PR-5: 
-document.write("<h3>5. </h3>");
+//PR-5: Objest creation
+document.write("<h3>5. Creating Object Using new Object()</h3>");
+var person = new Object();
+person.firstName = "Dhruv";
+person.lastName = "Patel";
+person.sayHi = ()=>{
+    document.write("Welcome " + person.firstName + "  " + person.lastName);
+}
+person.sayHi();
+document.write("<br><br>");
+
+//PR-6: 
 
 
