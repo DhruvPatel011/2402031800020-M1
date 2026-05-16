@@ -21,6 +21,12 @@ document.write("<br><br>");
 const d = new Date();
 document.write("<h3>4. Date Object</h3>");
 document.write(d);
+document.write("<br>");
+const o = new Date(2025,30);
+document.write(o);
+document.write("<br>");
 
+//PR-5: 
+document.write("<h3>5. </h3>");
 
 
