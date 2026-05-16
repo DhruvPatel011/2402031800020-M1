@@ -37,6 +37,18 @@ person.sayHi = ()=>{
 person.sayHi();
 document.write("<br><br>");
 
-//PR-6: 
+//PR-6: Objest Using Literal Notation
+document.write("<h3>6. Creating Object Using Literal Notation</h3>");
+var person1 = {firstName: "Dhruv", lastName: "Patel",
+    sayHi : function() 
+    {
+        document.write("Hellow " + person1.firstName + " " + person1.lastName);
+    }
+}
+person1.sayHi();
+document.write("<br><br>");
+
+//PR-7: 
+document.write("<h3>7. </h3>");
 
 
