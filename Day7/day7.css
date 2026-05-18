@@ -56,3 +56,13 @@ button{
     padding: 8px;
 }
 
+select{
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 8px;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;    
+  background: white;
+  cursor: pointer;
+}
