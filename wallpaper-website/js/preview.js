@@ -7,6 +7,16 @@
 // 4. Related wallpapers section
 // 5. Fallback to other wallpapers if same category not found
 
+(function loadTheme() {
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'light') {
+    document.body.classList.add('light');
+  } else {
+    document.body.classList.remove('light');
+  }
+})();
+
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get('id')) || 1;
 
