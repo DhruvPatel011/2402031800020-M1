@@ -16,11 +16,38 @@
           <span class="logo-wallpaper">Wallpaper</span>
           <span class="logo-hub">Hub</span>
       </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-      </nav>
+<!-- Replace ONLY the <nav>...</nav> section in index.html and preview.html -->
+
+<!-- Replace your current <nav>...</nav> in index.html and preview.html with this -->
+
+<!-- Replace your <nav>...</nav> with this -->
+
+<nav>
+  <!-- Home -->
+  <a href="index.html" class="nav-link">Home</a>
+
+  <!-- Saved Wallpapers -->
+  <a href="#" id="savedBtn" class="nav-link">Saved</a>
+
+  <!-- Category Dropdown -->
+  <select id="navCategorySelect" class="nav-select">
+    <option value="all">Categories</option>
+    <option value="nature">Nature</option>
+    <option value="anime">Anime</option>
+    <option value="cars">Cars</option>
+    <option value="gaming">Gaming</option>
+    <option value="space">Space</option>
+  </select>
+
+  <!-- Infinite Loop Toggle -->
+  <button
+    id="slideshowToggle"
+    class="nav-icon-btn"
+    title="Auto Slideshow"
+  >
+    ∞
+  </button>
+</nav>
       <button id="themeToggle">🌙</button>
     </div>
   </header>
