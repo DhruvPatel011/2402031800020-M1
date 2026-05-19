@@ -162,7 +162,7 @@ if (relatedContainer) {
                 href="preview.html?id=${item.id}"
                 title="Preview"
               >
-                👁️
+                👁
               </a>
 
               <!-- Download Button -->

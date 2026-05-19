@@ -499,3 +499,121 @@ body.light .download-btn-card::before {
 .hrr{
     opacity: 0.1;
 }
+
+/* ==========================================
+   OVERRIDE FIX FOR RELATED WALLPAPERS
+   Paste this at the VERY END of css/style.css
+   (Do not remove other CSS. Just paste at bottom.)
+   ========================================== */
+
+.related-section {
+  margin-top: 60px !important;
+  padding-top: 30px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.related-section h2 {
+  display: block !important;
+  text-align: center !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: var(--text) !important;
+  margin: 0 0 30px 0 !important;
+  position: relative !important;
+}
+
+.related-section h2::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-140px) !important;
+  top: 8px !important;
+  width: 4px !important;
+  height: 28px !important;
+  border-radius: 999px !important;
+}
+
+/* Main Grid Fix */
+#relatedWallpapers {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 32px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: start !important;
+}
+
+/* Card Fix */
+#relatedWallpapers .card {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background: var(--card) !important;
+}
+
+/* Image Fix */
+#relatedWallpapers .card img {
+  width: 100% !important;
+  height: 230px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Content Fix */
+#relatedWallpapers .card-content {
+  padding: 20px !important;
+}
+
+#relatedWallpapers .card-content h3 {
+  margin: 0 0 8px 0 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.2 !important;
+  color: var(--text) !important;
+}
+
+#relatedWallpapers .card-content p {
+  margin: 0 0 16px 0 !important;
+  color: var(--muted) !important;
+}
+
+/* Buttons Fix */
+#relatedWallpapers .actions {
+  display: flex !important;
+  gap: 12px !important;
+  margin-top: 16px !important;
+}
+
+#relatedWallpapers .icon-btn {
+  width: 52px !important;
+  min-width: 52px !important;
+  height: 52px !important;
+  flex: none !important;
+}
+
+#relatedWallpapers .download-btn-card {
+  flex: 1 !important;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  #relatedWallpapers {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  #relatedWallpapers .card img {
+    height: 200px !important;
+  }
+
+  .related-section h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .related-section h2::before {
+    transform: translateX(-110px) !important;
+    height: 24px !important;
+  }
+}
