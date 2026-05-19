@@ -25,6 +25,7 @@ body {
   background: var(--bg);
   color: var(--text);
   transition: 0.3s;
+  width: 100%;
 }
 
 .container {
@@ -49,7 +50,11 @@ body.light .header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  border-bottom: 1px solid rgb(85, 85, 85);
+  width: 100%;
+  padding: 10px 20px 10px 20px;
 }
+
 
 .logo {
   font-size: 1.5rem;
@@ -69,7 +74,12 @@ nav a {
   padding: 0.6rem 0.8rem;
   border-radius: 10px;
   cursor: pointer;
+  border: 1px solid rgb(172, 172, 172);
 }
+#themeToggle:hover{
+  background-color: #e6e6e679;
+}
+
 
 .hero {
   padding: 5rem 0 3rem;
@@ -726,4 +736,80 @@ body.light .card:hover {
   box-shadow:
     0 25px 50px rgba(15, 23, 42, 0.12),
     0 10px 25px rgba(99, 102, 241, 0.10);
+}
+
+/* ==========================================
+   MODERN MARKET-STYLE BACK BUTTON
+   Inspired by premium websites (minimal pill style)
+   Replace your old .back-btn CSS with this
+   ========================================== */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+
+  /* Clean subtle background */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* Left Arrow */
+.back-btn::before {
+  font-size: 1rem;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.back-btn:hover {
+  color: #acacac;
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.18);
+}
+
+.back-btn:hover::before {
+  transform: translateX(-4px);
+}
+
+/* Active */
+.back-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================
+   LIGHT MODE
+   ========================================== */
+
+body.light .back-btn {
+  color: #0f172a;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+body.light .back-btn:hover {
+  color: #666668;
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.18);
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 768px) {
+  .back-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
 }
