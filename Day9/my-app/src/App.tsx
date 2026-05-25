@@ -9,6 +9,7 @@ import './App.css'
 import rct from './assets/react.svg';
 import Hello from './Hello';
 import Bye from './bye';
+import Count from './Counter';
 import './App.css';
 
 
@@ -29,6 +30,8 @@ function App() {
       <h3 >It's inside <code>App.tsx</code> File... !</h3>
       <Hello name10="dhruv" age={20} city="Ahemdabad" hobbies={hobbies}/>
       <img src={rct} height="200px"  alt="React Img" />
+      <br /><br />
+      <Count />
       <br /><br />
       <Bye />
       <br />
