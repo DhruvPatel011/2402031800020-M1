@@ -1,11 +1,7 @@
-body{
-  background: rgb(22, 0, 58);
-  color: white;
+.visible {
+    display: block;
 }
 
-.visible{
-  display: block;
-}
-.unvisible{
-  display: block;
+.unvisible {
+    display: none;
 }

@@ -1,45 +1,49 @@
-function bye(){
+import styles from "./Bye.module.css"
 
-    const users=[
-        {
-            name: "Dhruv Patel",
-            age:20,
-            city:"Bharuch"
-        },
+function Bye() {
+
+  
+
+    const users = [
         {
             name: "Krish Patel",
-            age:18,
-            city:"Ahemdabad"
+            age: 20,
+            city: "Los Angeles"
         },
         {
-            name:"Priya Patel",
-            age:20,
-            city:"Bharuch"
+            name: "Dhruv Patel",
+            age: 22,
+            city: "New York"
+        },
+        {
+            name: "Rudra Patel",
+            age: 20,
+            city: "Chicago"
         }
     ]
-    const name2="Patel"
-    const getname = (name:string)=>{
-        return name
+    const name2 = "Patel"
+const getname = (name: string) => {
+        return name 
     }
+
+
     return (
-        <>
-            <h2 className="{style.test">Bye Component</h2>
-            <br />
-            {users.map((user,index)=>(
+        <div>
+            <h2 className={styles.test}>Bye Component</h2>
+
+            {users.map((user, index) => (
                 <div key={index}>
-                    <hr />
                     <p>Name: {user.name}</p>
                     <p>Age: {user.age}</p>
                     <p>City: {user.city}</p>
                     <hr />
                 </div>
             ))}
+         <h2>Bye {getname(name2)}</h2>
+         
 
-            <h3>Bye {getname(name2)}</h3>
-        </>
-    );
+        </div>
+    )
 }
 
-export default bye;
-
-
+export default Bye

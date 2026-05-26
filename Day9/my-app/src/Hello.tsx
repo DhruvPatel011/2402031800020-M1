@@ -1,74 +1,58 @@
-import { Heading1 } from "lucide-react";
 import './App.css'
 
-function Hello({name10="dhruv",age=20,city="Ahemdabad",hobbies=["Coding","Traveling","Cooking"]}){
+function Hello({name="Krish", age=20 ,city="Ahmedabad" , hobbies=["Coding", "Traveling", "Cooking"]}) {
 
-    const getname = (yourname) => {
-        return yourname;
+   
+    const getname = (name: string) => {
+        return name 
     }
-    const name = "Dhruv"
-    const name1 = "Patel"
 
-    function handleClick(){
-      alert("Clicked")
+    const handleclick = () => {
+        alert("Button Clicked")
     }
-    function handleInput(){
-        console.clear();
-        console.log("Value: ", event?.target.value);
-    }
-    const handleMouseOver = () => {
-        console.clear();
-        console.log("Text Over");
-    }
-    const handleDoubleClick = () => {
-        console.clear();
-        console.log("Double Clicked");
-    }
-    //condition 1
-    const isLoggedIn = false;
-    let message;
-    if(isLoggedIn){
-        message = <h1>Welcome User</h1>
-    }else{
-        message = <h2>Please Login</h2>
-    }
-    //condition 2
-    const mess = false;
-    
-    
 
+    const handlechange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        console. clear()
+        console.log(event.target.value)
+    }
 
+    const fruits = ["Apple", "Banana", "Cherry"]
+     const isLoggedIn = true
+     let message;
 
-    return(
+     if(isLoggedIn){
+        message = <h1>Welcome, {getname(name)}!</h1>
+     } else {
+        message = <h1>Please log in to continue.</h1>
+     }
+
+     const isVisible = true;
+
+    return (
         <>
-            <h2 >It's inside <code>Hello.tsx</code> File... ! 
-            <br /><br />
-                Hello <code>{getname(name)}</code>...!
-            <br />
-                Bye <code>{getname(name1)}</code>...!
-            <br /><br />
-                <button onClick={handleClick}>Click</button>
-            <br />
-                <button onClick={() => alert("Arrow")}>Arrow</button>
-            <br /><br />
-                <input type="text" onChange={handleInput} />
-            <br />
-                <input type="text" onClick={()=> alert("arr")} />
-            <br /><br />
-                <p onMouseOver={handleMouseOver} onDoubleClick={handleDoubleClick}>MouseOver & DoubleCLick</p>
-            <br />
-                <p>{message}</p>
-                <p>{mess ? <h3>True</h3> : <h3>False</h3>}</p>
-                {mess ? <p className="visible">Visible</p> : <p className="unvisible">Unvisible</p>}
-            <br />
-                <p>Hobbies: {hobbies.join(", ")}</p>
-                <p>City: {city}</p>
-                <p>Age: {age}</p>
+         <h1>Hello {getname(name)}</h1>
 
-            <br /><br />
-            </h2>
+          
+          <h3>Fruits:</h3>
+          <ul>
+            {fruits.map((fruit, index) => (
+              <li key={index}>{fruit}</li>
+              
+            ))}
+          </ul>
+
+            <button onClick={handleclick}>Click Me</button>
+            <button onClick={()=>alert("Button Clicked")}>Say Hello</button>
+            <br />
+            <input type="text" onChange={handlechange} placeholder="Type Something"/>
+            <p>{message}</p>
+            {isVisible ? <p className="visible">This is a conditional message.</p> : <p className="unvisible">This is a conditional message.</p>}
+            <p>Hobbies: {hobbies.join(", ")}</p>
+            <p>City: {city}</p>
+            <p>Age: {age}</p>
+           
         </>
     )
 }
 
-export default Hello;
+export default Hello
