@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced jQuery Demo</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    padding:30px;
+}
+input{
+    padding:10px;
+    width:200px;
+    font-size:16px;
+}
+.box{
+    width:300px;
+    height:150px;
+    background:skyblue;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:10px;
+    border-radius:10px;
+}
+
+.red{
+    background:red !important;
+    color:white;
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+}
+
+#error{
+    color:red;
+    display:none;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Advanced jQuery Demo</h1>
+
+<input type="text" id="txtInput" placeholder="Enter Text">
+<p id="error">Invalid Input</p>
+
+<br><br>
+
+<button id="hideBtn">Hide</button>
+<button id="showBtn">Show</button>
+<button id="toggleBtn">Toggle</button>
+
+<button id="fadeInBtn">Fade In</button>
+<button id="fadeOutBtn">Fade Out</button>
+<button id="fadeToggleBtn">Fade Toggle</button>
+
+<button id="slideUpBtn">Slide Up</button>
+<button id="slideDownBtn">Slide Down</button>
+<button id="slideToggleBtn">Slide Toggle</button>
+
+<button id="htmlBtn">Change HTML</button>
+<button id="appendBtn">Append</button>
+<button id="prependBtn">Prepend</button>
+
+<button id="cssBtn">Change CSS</button>
+<button id="removeCssBtn">Remove CSS</button>
+
+<div class="box" id="box">
+    Hello jQuery
+</div>
+
+<div id="content"></div>
+
+<script>
+
+$(document).ready(function(){
+
+    // Hide
+    $("#hideBtn").click(function(){
+        $("#box").hide();
+    });
+
+    // Show
+    $("#showBtn").click(function(){
+        $("#box").show();
+    });
+
+    // Toggle
+    $("#toggleBtn").click(function(){
+        $("#box").toggle();
+    });
+
+    // Fade In
+    $("#fadeInBtn").click(function(){
+        $("#box").fadeIn(1000);
+    });
+
+    // Fade Out
+    $("#fadeOutBtn").click(function(){
+        $("#box").fadeOut(1000);
+    });
+
+    // Fade Toggle
+    $("#fadeToggleBtn").click(function(){
+        $("#box").fadeToggle(1000);
+    });
+
+    // Slide Up
+    $("#slideUpBtn").click(function(){
+        $("#box").slideUp();
+    });
+
+    // Slide Down
+    $("#slideDownBtn").click(function(){
+        $("#box").slideDown();
+    });
+
+    // Slide Toggle
+    $("#slideToggleBtn").click(function(){
+        $("#box").slideToggle();
+    });
+
+    // html()
+    $("#htmlBtn").click(function(){
+
+        $("#box").html(
+            "<h2 style='color:white'>HTML Changed</h2>"
+        );
+
+    });
+
+    // append()
+    $("#appendBtn").click(function(){
+
+        $("#content").append(
+            "<p>Appended using jQuery</p>"
+        );
+
+    });
+
+    // prepend()
+    $("#prependBtn").click(function(){
+
+        $("#content").prepend(
+            "<p>Prepended using jQuery</p>"
+        );
+
+    });
+
+    // css() + addClass()
+    $("#cssBtn").click(function(){
+
+        $("#box").addClass("red");
+
+    });
+
+    // removeClass()
+    $("#removeCssBtn").click(function(){
+
+        $("#box").removeClass("red");
+
+    });
+
+    // Validation
+    $("#txtInput").keyup(function(){
+
+        let value = $(this).val();
+
+        if($.isNumeric(value) && value!=""){
+            $("#error").fadeIn();
+        }
+        else{
+            $("#error").fadeOut();
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
