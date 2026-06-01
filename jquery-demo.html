@@ -30,8 +30,9 @@ input{
 }
 
 .red{
-    background:red !important;
-    color:white;
+    background:linear-gradient(135deg,#0f0061,rgb(0, 110, 255)) !important;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgb(250, 250, 250);
 }
 
 button{
@@ -43,6 +44,19 @@ button{
 #error{
     color:red;
     display:none;
+}
+.slider-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:20px;
+}
+
+#slider{
+    width:600px;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
 }
 
 </style>
@@ -75,12 +89,25 @@ button{
 <button id="cssBtn">Change CSS</button>
 <button id="removeCssBtn">Remove CSS</button>
 
-<div class="box" id="box">
-    Hello jQuery
-</div>
+<div class="box" id="box">Hello jQuery</div>
 
 <div id="content"></div>
 
+<h2>jQuery Image Slider</h2>
+
+<div class="slider-container">
+
+  <button id="prevBtn">⬅</button>
+
+  <img
+    id="slider"
+    src="https://picsum.photos/id/1015/600/300"
+    alt="slider"
+  >
+
+  <button id="nextBtn">➡</button>
+
+</div>
 <script>
 
 $(document).ready(function(){
@@ -184,7 +211,64 @@ $(document).ready(function(){
         }
 
     });
+    const images = [
 
+  "https://picsum.photos/id/1015/600/300",
+
+  "https://picsum.photos/id/1016/600/300",
+
+  "https://picsum.photos/id/1018/600/300",
+
+  "https://picsum.photos/id/1020/600/300"
+
+];
+
+let current = 0;
+
+// Next
+$("#nextBtn").click(function(){
+
+    $("#slider").fadeOut(500,function(){
+
+        current++;
+
+        if(current >= images.length){
+            current = 0;
+        }
+
+        $("#slider")
+            .attr("src",images[current])
+            .fadeIn(500);
+
+    });
+
+});
+
+// Previous
+$("#prevBtn").click(function(){
+
+    $("#slider").fadeOut(500,function(){
+
+        current--;
+
+        if(current < 0){
+            current = images.length - 1;
+        }
+
+        $("#slider")
+            .attr("src",images[current])
+            .fadeIn(500);
+
+    });
+
+});
+
+// Auto Slider
+setInterval(function(){
+
+    $("#nextBtn").click();
+
+},3000);
 });
 
 </script>
