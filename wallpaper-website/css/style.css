@@ -1106,6 +1106,19 @@ nav {
 }
 
 
+.empty-state{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.empty-state h2{
+  margin-bottom:10px;
+}
+
+.empty-state p{
+  color:var(--muted);
+}
+
 /* ==========================================
    MODERN CATEGORY DROPDOWN
    ========================================== */
@@ -1357,3 +1370,5 @@ body.light .save-btn.saved {
     border-radius: 12px;
   }
 }
+
+

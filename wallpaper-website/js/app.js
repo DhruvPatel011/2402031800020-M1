@@ -30,6 +30,12 @@ const params = new URLSearchParams(window.location.search);
 const urlCategory = params.get('category');
 const urlTag = params.get('tag');
 
+const urlSearch = params.get('search');
+
+if (urlSearch && searchInput) {
+  searchInput.value = decodeURIComponent(urlSearch);
+}
+
 if (urlCategory) {
   currentCategory = urlCategory;
 }
@@ -210,9 +216,12 @@ function renderGallery(customWallpapers = null) {
   currentWallpapers = filtered;
 
   if (filtered.length === 0) {
-    galleryContainer.innerHTML =
-      '<p>No wallpapers found.</p>';
-    return;
+    galleryContainer.innerHTML = `
+<div class="empty-state">
+  <h2>No Wallpapers Found</h2>
+  <p>Try a different search or category.</p>
+</div>
+`;
   }
 
   const savedIds = getSavedWallpapers();
@@ -241,6 +250,7 @@ function renderGallery(customWallpapers = null) {
 
         <!-- Wallpaper Image -->
         <img
+          loading="lazy"
           src="${item.image}"
           alt="${item.title}"
         >
