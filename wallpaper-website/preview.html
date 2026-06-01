@@ -9,7 +9,10 @@
 <body>
   <header class="header">
     <div class="container nav">
-      <div class="logo">4K Wallpapers</div>
+      <div class="logo">
+  <span class="logo-wallpaper">Wallpaper</span>
+  <span class="logo-hub">Hub</span>
+</div>
 
       <div class="nav-categories">
         <a href="index.html?category=nature">Nature</a>
@@ -20,7 +23,8 @@
       </div>
 
       <div class="search-box small">
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" id="searchInput" />
+        <p id="errorMsg"></p>
       </div>
     </div>
   </header>
@@ -104,9 +108,9 @@
 
   </div>
 </section>
-
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <script src="js/wallpapers.js"></script>
   <script src="js/preview.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

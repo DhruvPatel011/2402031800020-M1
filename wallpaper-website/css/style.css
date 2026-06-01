@@ -691,6 +691,13 @@ body.light .download-btn-card::before {
   border-radius: 999px !important;
 }
 
+#errorMsg{
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
 /* Main Grid Fix */
 #relatedWallpapers {
   display: grid !important;
@@ -1104,7 +1111,14 @@ nav {
   color: #6366f1;
   background: rgba(99, 102, 241, 0.08);
 }
-
+.nav-link.active{
+  background:linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+  );
+  color:white;
+}
 
 .empty-state{
   text-align:center;

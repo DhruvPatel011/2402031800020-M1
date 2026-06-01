@@ -37,7 +37,8 @@ document.getElementById('previewCategory').textContent =
   capitalize(wallpaper.category);
 
 document.getElementById('previewDescription').textContent =
-  `Download ${wallpaper.title} in 4K and original resolution.`;
+wallpaper.description ||
+`Download ${wallpaper.title} in 4K and original resolution.`;
 
 // =========================
 // MAIN IMAGE
@@ -163,7 +164,7 @@ if (relatedContainer) {
 
           <div class="card-content">
             <h3>${item.title}</h3>
-            <p>${item.category.toUpperCase()} • 4K</p>
+            <p>${item.category.toUpperCase()} • ${item.resolution || '4K'}</p>
 
             <div class="actions">
               <!-- Preview Button -->

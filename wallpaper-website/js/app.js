@@ -372,6 +372,30 @@ if (slideshowToggle) {
   });
 }
 
+$(function () {
+
+  $("#searchInput").keydown(function (e) {
+
+    if (e.key === "Enter") {
+
+      $("#errorMsg").remove();
+
+      let value = $(this).val().trim();
+
+      if (/^\d+$/.test(value)) {
+
+        $(this).after(
+          '<p id="errorMsg" style="color:red;margin-top:8px;">Invalid Input</p>'
+        );
+
+        e.preventDefault();
+      }
+    }
+
+  });
+
+});
+
 // ==========================================
 // INITIAL RENDER
 // ==========================================
