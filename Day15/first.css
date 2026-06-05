@@ -1,0 +1,13 @@
+.container{
+    border: 5px solid black;
+}
+
+.col{
+    border: 5px solid red;
+    text-align: center;
+}
+
+.row{
+    border: 5px solid green;
+}
+
