@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Bootstrap Forms</title>
+</head>
+
+<body>
+<div class="container border border-4 mt-3 p-4">
+
+    <h2 class="text-center mb-5">
+        Bootstrap Inline & Horizontal Form Classes
+    </h2>
+
+    <!-- Inline Form -->
+    <div class="row mb-5">
+        <div class="col">
+            <form class="d-flex gap-3 align-items-center flex-wrap">
+                <div>
+                    <label class="visually-hidden">User Name</label>
+                    <input type="text" class="form-control" placeholder="User Name">
+                </div>
+
+                <div>
+                    <label class="visually-hidden">Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Form Row -->
+    <form class="row g-3 mb-5">
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="User Name">
+        </div>
+
+        <div class="col-md-4">
+            <input type="password" class="form-control" placeholder="Password">
+        </div>
+
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">
+                Login
+            </button>
+        </div>
+    </form>
+
+    <!-- Checkboxes -->
+    <div class="mb-5">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="musicCheck">
+            <label class="form-check-label" for="musicCheck">Music</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="sportCheck">
+            <label class="form-check-label" for="sportCheck">Sport</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="bookCheck" disabled>
+            <label class="form-check-label" for="bookCheck">Book</label>
+        </div>
+    </div>
+
+    <!-- Radio Buttons -->
+    <div class="mb-5">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="maleCheck" checked>
+            <label class="form-check-label" for="maleCheck">Male</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="femaleCheck">
+            <label class="form-check-label" for="femaleCheck">Female</label>
+        </div>
+    </div>
+
+    <!-- Horizontal Form -->
+    <form>
+        <div class="row mb-3 align-items-center">
+            <label class="col-sm-2 col-form-label col-form-label-lg">
+                User Name
+            </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <label class="col-sm-2 col-form-label col-form-label-sm">
+                Password
+            </label>
+
+            <div class="col-sm-10">
+                <input type="password" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Save
+        </button>
+    </form>
+
+</div>
+</body>
+</html>
